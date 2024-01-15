@@ -19,8 +19,8 @@ RUN . "${NVM_DIR}/nvm.sh" && nvm alias default v${NODE_VERSION}
 # Install dfx
 RUN sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
 
-COPY .devcontainer/docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-CMD [ "/docker-entrypoint.sh" ]
+# COPY .devcontainer/docker-entrypoint.sh /
+# RUN chmod +x /docker-entrypoint.sh
+# CMD [ "/docker-entrypoint.sh" ]
 
-EXPOSE 4943
+# EXPOSE 4943

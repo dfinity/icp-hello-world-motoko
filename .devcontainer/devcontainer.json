@@ -26,10 +26,10 @@
         }
     },
     // Uncomment the next line to run commands after the container is created.
-    // "postStartCommand": "nohup bash -c 'dfx start &' && cat nohup.out && rm nohup.out",
+    "onCreateCommand": "nohup bash -c 'dfx start &' && cat nohup.out && rm nohup.out",
     "postCreateCommand": "npm install",
     "postAttachCommand": "dfx deploy && npm start",
-    "overrideCommand": false,
+    // "overrideCommand": false,
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
