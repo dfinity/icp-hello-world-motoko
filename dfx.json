@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icp_hello_world_backend": {
+      "main": "src/icp_hello_world_backend/main.mo",
+      "type": "motoko"
+    },
+    "icp_hello_world_frontend": {
+      "dependencies": [
+        "icp_hello_world_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icp_hello_world_frontend/src/index.html"
+      },
+      "source": [
+        "src/icp_hello_world_frontend/assets",
+        "dist/icp_hello_world_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
