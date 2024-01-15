@@ -11,15 +11,23 @@
     // Features to add to the dev container. More info: https://containers.dev/features.
     // "features": {},
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
-    "forwardPorts": [
-        3000,
-        4943
-    ],
+    "portsAttributes": {
+        // "3000": {
+        //     "label": "canisters",
+        //     "onAutoForward": "notify"
+        // },
+        "4943": {
+            "label": "dfx",
+            "onAutoForward": "notify"
+        },
+        "8080": {
+            "label": "node",
+            "onAutoForward": "notify"
+        }
+    },
     // Uncomment the next line to run commands after the container is created.
-    "postCreateCommand": [
-        "dfx start --background --clean",
-        "dfx deploy"
-    ],
+    // "postStartCommand": "nohup bash -c 'dfx start &' && cat nohup.out && rm nohup.out",
+    "overrideCommand": false,
     // Configure tool-specific properties.
     "customizations": {
         "vscode": {
