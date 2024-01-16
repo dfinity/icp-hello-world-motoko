@@ -32,7 +32,7 @@
     // Uncomment the next line to run commands after the container is created.
     "onCreateCommand": "nohup bash -c 'dfx start &' && cat nohup.out && rm nohup.out",
     "postCreateCommand": "npm install",
-    "postAttachCommand": "dfx deploy && npm start",
+    // "postAttachCommand": "dfx deploy && npm start",
     // "overrideCommand": false,
     // Configure tool-specific properties.
     "customizations": {
