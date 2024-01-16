@@ -1,5 +1,6 @@
 # Various IDEs and Editors
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
 **/*~
 
