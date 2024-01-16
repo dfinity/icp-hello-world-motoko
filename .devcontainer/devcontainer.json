@@ -26,8 +26,7 @@
         },
         "8080": {
             "label": "node",
-            "onAutoForward": "openBrowser",
-            "protocol": "http"
+            "onAutoForward": "openBrowser"
         }
     },
     // Uncomment the next line to run commands after the container is created.
