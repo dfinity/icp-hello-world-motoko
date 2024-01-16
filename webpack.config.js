@@ -92,5 +92,6 @@ module.exports = {
     hot: true,
     watchFiles: [path.resolve(__dirname, "src", frontendDirectory)],
     liveReload: true,
+    allowedHosts: "all",
   },
 };
