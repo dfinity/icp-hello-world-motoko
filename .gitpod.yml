@@ -1,11 +1,11 @@
 tasks:
   - before: |
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-      npm install
+      npm install &
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
-      dfx start --background
+      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      dfx start --background --clean
    
 
 vscode:
