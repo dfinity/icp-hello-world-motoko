@@ -25,7 +25,7 @@
             "onAutoForward": "silent"
         },
         "8080": {
-            "label": "node",
+            "label": "dev server",
             "onAutoForward": "openBrowser"
         }
     },
