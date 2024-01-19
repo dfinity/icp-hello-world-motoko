@@ -7,7 +7,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
-const frontendDirectory = "icp_hello_world_rust_motoko_frontend";
+const frontendDirectory = "icp_hello_world_motoko_frontend";
 
 const frontend_entry = path.join("src", frontendDirectory, "src", "index.html");
 

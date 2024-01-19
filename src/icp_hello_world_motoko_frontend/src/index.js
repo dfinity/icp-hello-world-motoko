@@ -1,4 +1,4 @@
-import { icp_hello_world_rust_motoko_backend } from "../../declarations/icp_hello_world_rust_motoko_backend";
+import { icp_hello_world_motoko_backend } from "../../declarations/icp_hello_world_motoko_backend";
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -9,7 +9,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   button.setAttribute("disabled", true);
 
   // Interact with foo actor, calling the greet method
-  const greeting = await icp_hello_world_rust_motoko_backend.greet(name);
+  const greeting = await icp_hello_world_motoko_backend.greet(name);
 
   button.removeAttribute("disabled");
 
