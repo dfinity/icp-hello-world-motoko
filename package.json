@@ -17,9 +17,9 @@
     "generate": "dfx generate icp_hello_world_rust_motoko_backend"
   },
   "dependencies": {
-    "@dfinity/agent": "^0.20.2",
-    "@dfinity/candid": "^0.20.2",
-    "@dfinity/principal": "^0.20.2"
+    "@dfinity/agent": "0.19.0",
+    "@dfinity/candid": "^0.19.3",
+    "@dfinity/principal": "^0.19.3"
   },
   "devDependencies": {
     "assert": "2.0.0",
