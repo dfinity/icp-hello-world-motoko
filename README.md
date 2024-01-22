@@ -33,7 +33,7 @@ After the command has finished, click on the first green link at the end of the 
 
 For interactive development of the frontend canister, you can also start a node server by running `npm start`. You can find your canister's frontend running under http://localhost:8080.
 
-If you make changes to the backend canister, remember to call `dfx deploy` first; the frontend canister's webpage can just be reloaded after changes have been made to reflect the changes you've made.
+If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
 
 ## Documentation and Guides
 
