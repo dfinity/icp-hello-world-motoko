@@ -14,13 +14,9 @@ BOLD='\033[1m'
 if [ -n "${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}" ]; then
     echo -e "${BOLD}URLs:
   Frontend canister via browser
-    icp_hello_world_frontend: ${GREEN}https://${CODESPACE_NAME}-4943.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/?canisterId=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_FRONTEND}${NORMAL}${BOLD}
-  Backend canister via Candid interface:
-    icp_hello_world_backend: ${GREEN}https://${CODESPACE_NAME}-4943.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/?canisterId=be2us-64aaa-aaaaa-qaabq-cai&id=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_BACKEND}${NORMAL}"
+    icp_hello_world_frontend: ${GREEN}https://${CODESPACE_NAME}-4943.${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN}/?canisterId=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_FRONTEND}${NORMAL}"
 else
     echo -e "${BOLD}URLs:
   Frontend canister via browser
-    icp_hello_world_frontend: ${GREEN}http://127.0.0.1:4943/?canisterId=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_FRONTEND}${NORMAL}${BOLD}
-  Backend canister via Candid interface:
-    icp_hello_world_backend: ${GREEN}http://127.0.0.1:4943/?canisterId=be2us-64aaa-aaaaa-qaabq-cai&id=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_BACKEND}${NORMAL}"
+    icp_hello_world_frontend: ${GREEN}http://127.0.0.1:4943/?canisterId=${CANISTER_ID_ICP_HELLO_WORLD_MOTOKO_FRONTEND}${NORMAL}"
 fi
