@@ -1,16 +1,18 @@
 tasks:
-  - before: |
-      npm install &
-      export PATH="$HOME/bin:$PATH"
-      echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-      sudo apt-get install -q -y libunwind-dev
-      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-      dfx start --background --clean
-   
+    - before: |
+        export PATH="$HOME/bin:$PATH"
+        echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+        sudo apt-get install -q -y libunwind-dev
+        sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+        npm install &
+        dfx start --background --clean
+        open README.md
 
 vscode:
   extensions:
     - dfinity-foundation.vscode-motoko
+    - tamasfe.even-better-toml
+    - rust-lang.rust-analyzer
 
 ports:
   - name: Replica
@@ -18,6 +20,6 @@ ports:
     visibility: public
     onOpen: ignore
   - name: Dev Server
-    port: 3000
+    port: 8080
     visibility: public
     onOpen: open-browser
