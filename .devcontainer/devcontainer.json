@@ -12,8 +12,9 @@
             "onAutoForward": "openBrowser"
         }
     },
-    "onCreateCommand": "nohup bash -c 'dfx start --clean --background'",
+    "onCreateCommand": "nohup bash -c 'dfx start &'",
     "postStartCommand": "npm install",
+    "postAttachCommand": "cat nohup.out && rm nohup.out",
     "customizations": {
         "vscode": {
             "extensions": [
