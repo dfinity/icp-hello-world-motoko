@@ -1,63 +1,52 @@
-# icp_hello_world_motoko
+# ICP Hello World Motoko
 
-[![Open locally in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dfinity/icp-hello-world-motoko)
+This repository provides a simple and quick way to start developing a canister smart contract for the [Internet Computer](https://internetcomputer.org/) in Motoko.
+The repository can be used with macOS, Windows or Linux.
+
+## Getting Started
+
+To get started with Gitpod, click the button below:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dfinity/icp-hello-world-motoko)
 
-Welcome to your new icp_hello_world_motoko project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+If you rather want to use Github Codespaces, click this button instead:
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dfinity/icp-hello-world-motoko?quickstart=1)
 
-To learn more before you start working with icp_hello_world_motoko, see the following documentation available online:
+If you prefer running VS Code locally and not in the browser, click "Codespaces: ..." or "Gitpod" in the bottom left corner and select "Open in VS Code" in the menu that appears. 
+If prompted, proceed by installing the recommended plugins for VS Code.
+
+### Local Development
+
+If you prefer to develop locally, please first install [Docker](https://www.docker.com/get-started/) and [VS Code](https://code.visualstudio.com/) and start them on your machine.
+Next, click the following button to open the dev container locally:
+
+[![Open locally in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dfinity/icp-hello-world-motoko)
+
+If prompted, install the required/recommended plugins for VS Code.
+
+## Running your Project
+
+After the IDE has opened, run `dfx deploy` in the terminal to deploy the example canister's frontend and backend in the dev environment. 
+After the command has finished, click on the first green link at the end of the output to see your canister's frontend in the browser. 
+**NOTE**: If the printed link does not work when developing remotely (in a web browser), run `./canister_url.sh` and click the link that is shown there.
+
+For interactive development of the frontend canister, you can also start a node server by running `npm start`. You can find your canister's frontend running under http://localhost:8080.
+
+If you make changes to the backend canister, remember to call `dfx deploy` first; the frontend canister's webpage can just be reloaded after changes have been made to reflect the changes you've made.
+
+## Documentation and Guides
+
+To learn more before you start working on this project, see the following documentation available online:
 
 - [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
 - [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
 - [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
 - [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
 
-If you want to start working on your project right away, you might want to try the following commands:
+If you want to start working on your project right away, you might want to try the following commands to familiarize yourself with `dfx`:
 
 ```bash
-cd icp_hello_world_motoko/
 dfx help
 dfx canister --help
 ```
-
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
-
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
-
-If you have made changes to your backend canister, you can generate a new candid interface with
-
-```bash
-npm run generate
-```
-
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
-
-If you are making frontend changes, you can start a development server with
-
-```bash
-npm start
-```
-
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
-
-### Note on frontend environment variables
-
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
-
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
