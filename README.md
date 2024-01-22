@@ -9,7 +9,7 @@ To get started with Gitpod, click the button below:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/dfinity/icp-hello-world-motoko)
 
-If you rather want to use Github Codespaces, click this button instead:
+If you rather want to use GitHub Codespaces, click this button instead:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/dfinity/icp-hello-world-motoko?quickstart=1)
 
