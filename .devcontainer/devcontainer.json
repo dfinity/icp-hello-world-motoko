@@ -13,7 +13,7 @@
         }
     },
     "onCreateCommand": "nohup bash -c 'dfx start &'",
-    "postAttachCommand": "([ -f nohup.out ] && (cat nohup.out && rm nohup.out ; npm i )) || exit 0",
+    "postAttachCommand": "([ -f nohup.out ] && (npm i && cat nohup.out && rm nohup.out)) || exit 0",
     "customizations": {
         "vscode": {
             "extensions": [
