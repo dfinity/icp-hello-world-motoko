@@ -16,7 +16,17 @@ If you rather want to use GitHub Codespaces, click this button instead:
 If you prefer running VS Code locally and not in the browser, click "Codespaces: ..." or "Gitpod" in the bottom left corner and select "Open in VS Code" in the menu that appears. 
 If prompted, proceed by installing the recommended plugins for VS Code.
 
-### Local Development
+### Running your Project
+
+After the IDE has opened, run `dfx deploy` in the terminal to deploy the frontend and backend. 
+Click on the first green link at the end of the output to see your canister's frontend in the browser. 
+**NOTE**: If the printed link does not work when developing remotely (in a web browser), run `./scripts/canister_url.sh` and click the link that is shown there.
+
+For interactive development of the frontend canister, you can also start a node server by running `npm start`. You can find your canister's frontend running under http://localhost:8080.
+
+If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
+
+## Local Development
 
 If you prefer to develop locally, please first install [Docker](https://www.docker.com/get-started/) and [VS Code](https://code.visualstudio.com/) and start them on your machine.
 Next, click the following button to open the dev container locally:
@@ -24,16 +34,6 @@ Next, click the following button to open the dev container locally:
 [![Open locally in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dfinity/icp-hello-world-motoko)
 
 If prompted, install the required/recommended plugins for VS Code.
-
-## Running your Project
-
-After the IDE has opened, run `dfx deploy` in the terminal to deploy the example canister's frontend and backend in the dev environment. 
-After the command has finished, click on the first green link at the end of the output to see your canister's frontend in the browser. 
-**NOTE**: If the printed link does not work when developing remotely (in a web browser), run `./scripts/canister_url.sh` and click the link that is shown there.
-
-For interactive development of the frontend canister, you can also start a node server by running `npm start`. You can find your canister's frontend running under http://localhost:8080.
-
-If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
 
 ## Documentation and Guides
 
