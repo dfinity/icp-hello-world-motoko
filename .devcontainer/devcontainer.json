@@ -14,7 +14,7 @@
     },
     "onCreateCommand": "nohup bash -c 'dfx start &'",
     "postStartCommand": "npm install",
-    "postAttachCommand": "cat nohup.out && rm nohup.out",
+    "postAttachCommand": "[ -f nohup.out ] && (cat nohup.out && rm nohup.out)",
     "customizations": {
         "vscode": {
             "extensions": [
