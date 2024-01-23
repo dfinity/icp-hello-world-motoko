@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Make sure we always run from the root
+SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$SCRIPTS_DIR/.."
+
 if [ -f .env ]; then
     source .env
 else
