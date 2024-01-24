@@ -26,7 +26,7 @@ For interactive development of the frontend canister, you can also start a node 
 You can find your canister's frontend running under http://localhost:8080.
 
 If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
-If your environment was restarted or has been inactive over some time, you might need to run `dfx start` before running `dfx deploy`.
+If your environment was restarted or has been inactive over some time, you might need to run `dfx start --background` before running `dfx deploy`.
 
 ## Local Development
 
