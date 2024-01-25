@@ -4,7 +4,7 @@ from pocket_ic import PocketIC
 import unittest
 from os import environ, path
 
-REPO_ROOT = environ["GITPOD_REPO_ROOT"] if "GITPOD_REPO_ROOT" in environ else "/workspaces/icp_hello_world_motoko"
+REPO_ROOT = environ["GITPOD_REPO_ROOT"] if "GITPOD_REPO_ROOT" in environ else "/workspaces/icp-hello-world-motoko"
 environ["POCKET_IC_BIN"] = REPO_ROOT + "/pocket-ic"
 BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/icp_hello_world_motoko_backend/"
 
