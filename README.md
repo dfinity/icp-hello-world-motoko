@@ -28,6 +28,10 @@ You can find your canister's frontend running under http://localhost:8080.
 If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
 If your environment was restarted or has been inactive over some time, you might need to run `dfx start --background` before running `dfx deploy`.
 
+## Testing your Project
+
+To run the [integration tests](/src/icp_hello_world_motoko_backend/tests/integration_tests.py#L21) for your backend canister, first run `dfx deploy` to build the canister, and then `./src/icp_hello_world_motoko_backend/tests/integration_tests.py`. 
+
 ## Local Development
 
 If you prefer to develop locally, please first install [Docker](https://www.docker.com/get-started/) and [VS Code](https://code.visualstudio.com/) and start them on your machine.
