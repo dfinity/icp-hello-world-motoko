@@ -19,8 +19,6 @@
         "vscode": {
             "extensions": [
                 "dfinity-foundation.vscode-motoko",
-                "tamasfe.even-better-toml",
-                "rust-lang.rust-analyzer",
                 "ms-python.python"
             ]
         }

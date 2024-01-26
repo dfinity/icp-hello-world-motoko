@@ -3,6 +3,7 @@ tasks:
         export PATH="$HOME/bin:$PATH"
         echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
         sudo apt-get install -q -y libunwind-dev
+        DFX_VERSION=0.15.2
         sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
         curl -sLO https://download.dfinity.systems/ic/69e1408347723dbaa7a6cd2faa9b65c42abbe861/openssl-static-binaries/x86_64-linux/pocket-ic.gz
         gzip -d pocket-ic.gz
@@ -15,8 +16,7 @@ tasks:
 vscode:
   extensions:
     - dfinity-foundation.vscode-motoko
-    - tamasfe.even-better-toml
-    - rust-lang.rust-analyzer
+    - ms-python.python
 
 ports:
   - name: Replica
