@@ -11,7 +11,7 @@ BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/icp_hello_world_motoko_backend/"
 class BackendCanisterTests(unittest.TestCase):
     def setUp(self) -> None:
         if not path.isdir(BASE_PATH):
-            raise Exception('Please run "dfx deploy" before running tests')
+            raise Exception('Run "dfx deploy" before running tests')
         with open(BASE_PATH + "icp_hello_world_motoko_backend.did", "r") as candid:
             self.candid = candid.read()
         with open(BASE_PATH + "icp_hello_world_motoko_backend.wasm", "rb") as wasm:

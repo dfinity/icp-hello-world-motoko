@@ -34,7 +34,7 @@ To run the [integration tests](/src/icp_hello_world_motoko_backend/tests/integra
 
 ## Local Development
 
-If you prefer to develop locally, please first install [Docker](https://www.docker.com/get-started/) and [VS Code](https://code.visualstudio.com/) and start them on your machine.
+If you prefer to develop locally, first install [Docker](https://www.docker.com/get-started/) and [VS Code](https://code.visualstudio.com/) and start them on your machine.
 Next, click the following button to open the dev container locally:
 
 [![Open locally in Dev Containers](https://img.shields.io/static/v1?label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/dfinity/icp-hello-world-motoko)

@@ -7,7 +7,7 @@ cd "$SCRIPTS_DIR/.."
 if [ -f .env ]; then
     source .env
 else
-    echo "Please run 'dfx deploy' first."
+    echo "Run 'dfx deploy' first."
     exit 1
 fi
 
