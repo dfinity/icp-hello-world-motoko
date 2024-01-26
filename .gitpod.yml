@@ -1,18 +1,24 @@
 tasks:
-    - before: |
-        export PATH="$HOME/bin:$PATH"
-        echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
-        sudo apt-get install -q -y libunwind-dev
-        sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
-        npm install &
-        dfx start --background --clean
-        open README.md
+  - before: |      
+      export PATH="$HOME/bin:$PATH"
+      export DFX_VERSION=0.16.0
+      export POCKET_IC_PYTHON_VERSION=2.0.2
+      export POCKET_IC_SERVER_HASH=69e1408347723dbaa7a6cd2faa9b65c42abbe861
+      echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+      sudo apt-get install -q -y libunwind-dev
+      sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      curl -sLO https://download.dfinity.systems/ic/${POCKET_IC_SERVER_HASH}/openssl-static-binaries/x86_64-linux/pocket-ic.gz
+      gzip -d pocket-ic.gz
+      chmod +x pocket-ic
+      pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION} 
+      npm install &
+      dfx start --background --clean
+      open README.md
 
 vscode:
   extensions:
     - dfinity-foundation.vscode-motoko
-    - tamasfe.even-better-toml
-    - rust-lang.rust-analyzer
+    - ms-python.python
 
 ports:
   - name: Replica

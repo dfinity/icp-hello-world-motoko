@@ -1,6 +1,6 @@
 {
     "name": "ICP Hello World Motoko",
-    "image": "ghcr.io/dfinity/icp-dev-env:release",
+    "image": "ghcr.io/dfinity/icp-dev-env:1",
     "forwardPorts": [4943, 8080],
     "portsAttributes": {
         "4943": {
@@ -13,13 +13,13 @@
         }
     },
     "onCreateCommand": "nohup bash -c 'dfx start &'",
+    "postCreateCommand": "mv /pocket-ic .",
     "postAttachCommand": "([ -f nohup.out ] && (npm i && cat nohup.out && rm nohup.out)) || exit 0",
     "customizations": {
         "vscode": {
             "extensions": [
                 "dfinity-foundation.vscode-motoko",
-                "tamasfe.even-better-toml",
-                "rust-lang.rust-analyzer"
+                "ms-python.python"
             ]
         }
     }
