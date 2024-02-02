@@ -19,8 +19,10 @@ If prompted, proceed by installing the recommended plugins for VS Code.
 ### Running your Project
 
 After the IDE has opened, run `dfx deploy` in the terminal to deploy the frontend and backend. 
-Click on the first green link at the end of the output to see your canister's frontend in the browser. 
-**NOTE**: If the printed link does not work when developing remotely (in a web browser), run `./scripts/canister_url.sh` and click the link that is shown there.
+Click on the first green link at the end of the output to see your canister's frontend in the browser.
+To interact with the backend canister, click on the second green link.
+**NOTE**: When developing in GitHub Codespaces, run `./scripts/canister_urls.py` and click the link that is shown there.
+
 
 For interactive development of the frontend canister, you can also start a node server by running `npm start`.
 You can find your canister's frontend running under http://localhost:8080.
