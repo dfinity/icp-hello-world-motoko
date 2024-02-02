@@ -11,7 +11,7 @@ BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/icp_hello_world_motoko_backend/"
 class BackendCanisterTests(unittest.TestCase):
     def setUp(self) -> None:
         if not path.isdir(BASE_PATH):
-            raise Exception('Run "dfx deploy" before running tests')
+            raise Exception('Run "dfx build" before running tests')
         with open(BASE_PATH + "icp_hello_world_motoko_backend.did", "r") as candid:
             self.candid = candid.read()
         with open(BASE_PATH + "icp_hello_world_motoko_backend.wasm", "rb") as wasm:
@@ -24,8 +24,8 @@ class BackendCanisterTests(unittest.TestCase):
         canister = pic.create_and_install_canister_with_candid(self.candid, self.wasm)
 
         # Call greet
-        response = canister.greet("ICP")[0]
-        self.assertEqual(response,"Hello, ICP!")
+        response = canister.greet("ICP")
+        self.assertEqual(response[0], "Hello, ICP!")
 
 
 if __name__ == "__main__":
