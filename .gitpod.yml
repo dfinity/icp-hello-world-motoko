@@ -1,9 +1,10 @@
 tasks:
-  - before: |      
-      export PATH="$HOME/bin:$PATH"
+  - before: |
       export DFX_VERSION=0.17.0
       export POCKET_IC_PYTHON_VERSION=2.1.0
       export POCKET_IC_SERVER_VERSION=3.0.1
+      export DFXVM_INIT_YES=true
+      export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
       sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
