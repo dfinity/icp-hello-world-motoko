@@ -8,10 +8,11 @@ tasks:
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
       sudo apt-get install -q -y libunwind-dev
       sh -ci "$(curl -fsSL https://internetcomputer.org/install.sh)"
+      source "$HOME/.local/share/dfx/env" 
       curl -Ls https://github.com/dfinity/pocketic/releases/download/${POCKET_IC_SERVER_VERSION}/pocket-ic-x86_64-linux.gz -o pocket-ic.gz
       gzip -d pocket-ic.gz
       chmod +x pocket-ic
-      pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION} 
+      pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION}
       npm install &
       dfx start --background --clean
       open README.md
