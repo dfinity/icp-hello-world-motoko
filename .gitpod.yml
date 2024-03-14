@@ -1,6 +1,6 @@
 tasks:
   - before: |
-      export DFX_VERSION=0.17.0
+      export DFX_VERSION=0.18.0
       export POCKET_IC_PYTHON_VERSION=2.1.0
       export POCKET_IC_SERVER_VERSION=3.0.1
       export DFXVM_INIT_YES=true
@@ -13,6 +13,7 @@ tasks:
       gzip -d pocket-ic.gz
       chmod +x pocket-ic
       pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION}
+      export DFX_VERSION=
       npm install &
       dfx start --background --clean
       open README.md
