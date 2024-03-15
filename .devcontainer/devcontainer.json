@@ -1,6 +1,6 @@
 {
     "name": "ICP Hello World Motoko",
-    "image": "ghcr.io/dfinity/icp-dev-env:4",
+    "image": "ghcr.io/dfinity/icp-dev-env:5",
     "forwardPorts": [
         4943,
         8080
