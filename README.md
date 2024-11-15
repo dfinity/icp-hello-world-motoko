@@ -18,20 +18,20 @@ If prompted, proceed by installing the recommended plugins for VS Code.
 
 ### Running your Project
 
-After the IDE has opened, run `dfx deploy` in the terminal to deploy the frontend and backend. 
+After the IDE has opened, run `dfx start`, then open a new terminal and run `dfx deploy` to deploy the frontend and backend. 
 Click on the first green link at the end of the output to see your canister's frontend in the browser.
 To interact with the backend canister, click on the second green link.
 **NOTE**: When developing in GitHub Codespaces, run `./scripts/canister_urls.py` and use the links that are shown there.
 
-For interactive development of the frontend canister, you can also start a node server by running `npm start`.
-You can find your canister's frontend running under http://localhost:8080.
+For interactive development of the frontend canister, you can also start a node server by running `npm run dev`.
+You can find your canister's frontend running under http://127.0.0.1:5173.
 
 If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
 If your environment was restarted or has been inactive over some time, you might need to run `dfx start --background` before running `dfx deploy`.
 
 ## Testing your Project
 
-To run the [integration tests](/src/icp_hello_world_motoko_backend/tests/integration_tests.py#L21) for your backend canister, first run `dfx build` to build the canister, and then `./src/icp_hello_world_motoko_backend/tests/integration_tests.py`.
+To run the [integration tests](/src/backend/tests/integration_tests.py#L21) for your backend canister, first run `dfx build` to build the canister, and then `./src/backend/tests/integration_tests.py`.
 If the canisters have not yet been created, run `dfx canister create --all` before `dfx build`.
 
 ## Local Development

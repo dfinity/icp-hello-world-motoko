@@ -5,16 +5,16 @@ import unittest
 from os import environ, path
 
 REPO_ROOT = environ["GITPOD_REPO_ROOT"] if "GITPOD_REPO_ROOT" in environ else "/workspaces/icp-hello-world-motoko"
-environ["POCKET_IC_BIN"] = REPO_ROOT + "/pocket-ic"
-BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/icp_hello_world_motoko_backend/"
+environ["POCKET_IC_BIN"] = "/usr/local/bin/pocket-ic"
+BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/backend/"
 
 class BackendCanisterTests(unittest.TestCase):
     def setUp(self) -> None:
         if not path.isdir(BASE_PATH):
             raise Exception('Run "dfx build" before running tests')
-        with open(BASE_PATH + "icp_hello_world_motoko_backend.did", "r") as candid:
+        with open(BASE_PATH + "backend.did", "r") as candid:
             self.candid = candid.read()
-        with open(BASE_PATH + "icp_hello_world_motoko_backend.wasm", "rb") as wasm:
+        with open(BASE_PATH + "backend.wasm", "rb") as wasm:
             self.wasm = wasm.read()
         return super().setUp()
     
