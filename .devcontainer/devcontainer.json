@@ -1,6 +1,6 @@
 {
   "name": "Hello World",
-  "image": "ghcr.io/fxgst/icp-dev-env:8",
+  "image": "ghcr.io/dfinity/icp-dev-env:14",
   "forwardPorts": [4943, 5173],
   "portsAttributes": {
     "4943": {

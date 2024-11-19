@@ -23,7 +23,7 @@ Click on the first green link at the end of the output to see your canister's fr
 To interact with the backend canister, click on the second green link.
 **NOTE**: When developing in GitHub Codespaces, run `./scripts/canister_urls.py` and use the links that are shown there.
 
-For interactive development of the frontend canister, you can also start a node server by running `npm run dev`.
+For interactive development of the frontend canister, you can also start a local dev server by running `npm run dev`.
 You can find your canister's frontend running under http://127.0.0.1:5173.
 
 If you make changes to the backend canister, remember to call `dfx deploy` first; it suffices to reload the frontend canister's webpage to reflect the changes you've made.
