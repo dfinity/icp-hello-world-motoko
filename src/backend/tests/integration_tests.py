@@ -4,9 +4,13 @@ from pocket_ic import PocketIC
 import unittest
 from os import environ, path
 
-REPO_ROOT = environ["GITPOD_REPO_ROOT"] if "GITPOD_REPO_ROOT" in environ else "/workspaces/icp-hello-world-motoko"
-environ["POCKET_IC_BIN"] = "/usr/local/bin/pocket-ic"
-BASE_PATH = REPO_ROOT + "/.dfx/local/canisters/backend/"
+environ["POCKET_IC_BIN"] = "/usr/local/bin/pocket-ic"  # Path of the pocket-ic binary
+BASE_PATH = (
+    path.dirname(path.realpath(__file__))
+    + "/../../../"
+    + ".dfx/local/canisters/backend/"
+)
+
 
 class BackendCanisterTests(unittest.TestCase):
     def setUp(self) -> None:
@@ -17,7 +21,7 @@ class BackendCanisterTests(unittest.TestCase):
         with open(BASE_PATH + "backend.wasm", "rb") as wasm:
             self.wasm = wasm.read()
         return super().setUp()
-    
+
     def test_backend_canister_greet(self):
         # Create and install canister
         pic = PocketIC()
