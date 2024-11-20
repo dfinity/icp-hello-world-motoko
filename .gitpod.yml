@@ -12,7 +12,7 @@ tasks:
       curl -Ls https://github.com/dfinity/pocketic/releases/download/${POCKET_IC_SERVER_VERSION}/pocket-ic-x86_64-linux.gz -o pocket-ic.gz
       gzip -d pocket-ic.gz
       chmod +x pocket-ic
-      mv pocket-ic /usr/local/bin
+      sudo mv pocket-ic /usr/local/bin
       pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION} --break-system-packages
       unset DFX_VERSION
       open README.md
