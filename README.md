@@ -31,7 +31,7 @@ If your environment was restarted or has been inactive over some time, you might
 
 ## Testing your Project
 
-To run the [integration tests](/src/backend/tests/integration_tests.py#L21) for your backend canister, first run `dfx build` to build the canister, and then `./src/backend/tests/integration_tests.py`.
+To run the [integration tests](/src/backend/tests/integration_tests.py) for your backend canister, first run `dfx build` to build the canister, and then `./src/backend/tests/integration_tests.py`.
 If the canisters have not yet been created, run `dfx canister create --all` before `dfx build`.
 
 ## Local Development
