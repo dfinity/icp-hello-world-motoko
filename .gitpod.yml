@@ -1,8 +1,8 @@
 tasks:
   - before: |
-      export DFX_VERSION=0.18.0
-      export POCKET_IC_PYTHON_VERSION=2.1.0
-      export POCKET_IC_SERVER_VERSION=3.0.1
+      export DFX_VERSION=0.24.2
+      export POCKET_IC_PYTHON_VERSION=3.0.0
+      export POCKET_IC_SERVER_VERSION=7.0.0
       export DFXVM_INIT_YES=true
       export PATH="$HOME/bin:$PATH"
       echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
@@ -12,10 +12,9 @@ tasks:
       curl -Ls https://github.com/dfinity/pocketic/releases/download/${POCKET_IC_SERVER_VERSION}/pocket-ic-x86_64-linux.gz -o pocket-ic.gz
       gzip -d pocket-ic.gz
       chmod +x pocket-ic
-      pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION}
-      export DFX_VERSION=
-      npm install &
-      dfx start --background --clean
+      mv pocket-ic /usr/local/bin
+      pip3 install pocket-ic==${POCKET_IC_PYTHON_VERSION} --break-system-packages
+      unset DFX_VERSION
       open README.md
 
 vscode:
@@ -24,11 +23,11 @@ vscode:
     - ms-python.python
 
 ports:
-  - name: Replica
+  - name: Dfx
     port: 4943
     visibility: public
     onOpen: ignore
-  - name: Dev Server
-    port: 8080
+  - name: Vite
+    port: 5173
     visibility: public
     onOpen: open-browser
