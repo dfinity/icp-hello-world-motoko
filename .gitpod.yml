@@ -1,6 +1,6 @@
 tasks:
   - before: |
-      export DFX_VERSION=0.24.2
+      export DFX_VERSION=0.24.3
       export POCKET_IC_PYTHON_VERSION=3.0.0
       export POCKET_IC_SERVER_VERSION=7.0.0
       export DFXVM_INIT_YES=true
